@@ -1,0 +1,53 @@
+.accordion-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  width: 40%;
+}
+.accordion-title {
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+.accordion-content {
+  display: none;
+  padding: 10px 20px;
+}
+.accordion-content p {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* タイトルの背景色 */
+.accordion-item:nth-of-type(1) {
+  background-color: #7f7fff;
+}
+.accordion-item:nth-of-type(2) {
+  background-color: #66cdaa;
+}
+.accordion-item:nth-of-type(3) {
+  background-color: #ff7f7f;
+}
+
+/* 矢印 */
+.accordion-title {
+  position: relative;
+}
+.accordion-title::after {
+  border-right: solid 2px #fff;
+  border-top: solid 2px #fff;
+  content: "";
+  display: block;
+  height: 8px;
+  position: absolute;
+  right: 25px;
+  top: 38%;
+  transform: rotate(135deg);
+  transition: transform .3s ease-in-out, top .3s ease-in-out;
+  width: 8px;
+}
+.accordion-title.open::after {
+  top: 45%;
+  transform: rotate(-45deg);
+}
